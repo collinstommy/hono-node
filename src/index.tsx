@@ -11,7 +11,7 @@ export const Layout: FC = ({ children }) => {
         <script src="https://unpkg.com/htmx.org@1.9.3"></script>
         <script src="https://unpkg.com/hyperscript.org@0.9.9"></script>
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-        <title>ToDo App</title>
+        <title>htmx</title>
       </head>
       <body class="border bg-gray-200 px-4 prose" hx-boost="true">
         {children}
@@ -20,8 +20,11 @@ export const Layout: FC = ({ children }) => {
   );
 };
 
-
 const app = new Hono()
-app.get('/', (c) => c.html(<Layout><h1>htmx patterns2</h1></Layout>))
+app.get('/', ( c) => c.html(<Layout>
+  <h1>htmx patterns</h1>
+<form>
+  <input></input>
+  </form> </Layout>))
 
 serve(app)
