@@ -9,10 +9,12 @@ const app = new Hono();
 app.get("/", (c) =>
   c.html(
     <Layout>
-      <section class="flex flex-col">
-        <a href="form">Basic form</a>
-        <a href="events">Event driven changes</a>
-      </section>
+     <a href="form" class="flex hover:underline">
+          Basic form
+        </a>
+        <a href="events" class="flex hover:underline">
+          Event driven changes
+        </a>
     </Layout>,
   ),
 );
