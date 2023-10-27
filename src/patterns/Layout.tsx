@@ -10,7 +10,7 @@ export const Layout: FC = ({ children }) => {
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
         <title>htmx</title>
       </head>
-      <body class="prose border bg-gray-200 px-4" hx-boost="true">
+      <body class="border bg-gray-200 px-4" hx-boost="true">
         {children}
       </body>
     </html>
